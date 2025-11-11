@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+  <!-- chybí lang, chybí viewport -->
+  <meta charset="utf-8">
+  <title>Home</title>
+  <style>
+    /* Inline styly – duplicity a nízký kontrast */
+    h1 { color:#000000; font-size:24px; } /* H1 pozdě */
+    p { margin:0px; padding:0px; color:#a0a0a0; }
+    .inline { color:#b0b0b0; }
+  </style>
+  <script src="script.js"></script> <!-- blokující -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="nav" style="background:#ffffff; border-bottom:1px solid #efefef;">
+    <div class="item" id="cta">Domů</div>
+    <div class="item">O nás</div>
+    <div class="item">Služby</div>
+    <div class="item">Kontakt</div>
+  </div>
+
+  <div class="hero">
+    <img src="obrazky/hero_obrovsky.jpg">
+    <!-- chybí alt, chybí width/height, žádný lazy-loading -->
+  </div>
+
+  <div class="container">
+    <h3 class="inline">Vítejte na našem webu</h3> <!-- špatné pořadí nadpisů -->
+    <h5 style="color:#c8c8c8">Nejlepší služby v galaxii</h5> <!-- nízký kontrast -->
+
+    <div id="cta" class="btn primary">Pokračovat</div> <!-- duplicitní ID + nejasné CTA -->
+
+    <div class="section">
+      <div><b>O nás</b></div> <!-- <b> místo <h*> -->
+      <p>Jsme moderní firma nabízející <i>unikátní</i> služby pro všechny...
+
+      <div class="section" style="color:#b5b5b5; font-size:13px;">
+        <div>Naše nabídka:</div>
+        <ul>
+          <li>Super rychlé řešení</li>
+          <li>Nejlepší kvalita</li>
+          <li>Skvělé ceny</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <div>Kontaktujte nás:</div>
+        <form action="#" method="post">
+          <input type="text" placeholder="Jméno">
+          <input type="email" placeholder="Email">
+          <button type="submit" class="btn">Pokračovat</button>
+          <!-- bez <label>, bez aria -->
+        </form>
+      </div>
+
+      <div class="section small">
+        <a href="#">Klikněte zde</a> pro více informací.
+      </div>
+
+      <!-- H1 až tady -->
+      <h1 style="margin-top:40px">Hlavní nadpis stránky dorazil pozdě</h1>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="hidden">Důležitý odkaz (schovaný)</div>
+    <div style="color:#bebebe">© 2025 Firma s.r.o.</div>
+  </div>
+</body>
+</html>

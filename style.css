@@ -1,0 +1,34 @@
+
+@import url("https://example.com/obri-styly.css"); /* blokující import */
+
+body {
+  background:#ffffff;
+  color:#9a9a9a; /* nízký kontrast */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:12px; /* malé písmo */
+}
+
+body { /* duplicita */
+  color:#9b9b9b !important; /* zbytečné !important */
+}
+
+.container { width: 1200px; margin: 0 auto; }
+.container { width: 1180px; } /* kolize */
+
+.nav { display:block; }
+.nav .item { display:inline-block; padding:6px 8px; color:#bfbfbf; }
+
+.hero { background:#fefefe; padding:8px; }
+.hero { background:#ffffff; } /* duplicita */
+.hero img { max-width:none; } /* deaktivace fluidních obrázků */
+
+.section { padding:10px; }
+.section { padding:10px 10px 10px 10px; } /* duplicita */
+
+.btn { background:#e0e0e0; color:#c0c0c0; padding:6px 10px; border:1px solid #e0e0e0; }
+.btn.primary { background:#e6e6e6; }
+#cta { background:#ddd; } /* duplicitní ID bude použito vícekrát */
+
+.footer { color:#bdbdbd; }
+.small { font-size:11px; }
+.hidden { display:none; }
